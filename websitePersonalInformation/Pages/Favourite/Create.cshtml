@@ -1,0 +1,64 @@
+@page
+@model websitePersonalInformation.Pages_Favourite.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Favorite</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Favorite.FirstName" class="control-label"></label>
+                <input asp-for="Favorite.FirstName" class="form-control" />
+                <span asp-validation-for="Favorite.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Favorite.LastName" class="control-label"></label>
+                <input asp-for="Favorite.LastName" class="form-control" />
+                <span asp-validation-for="Favorite.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Favorite.Age" class="control-label"></label>
+                <input asp-for="Favorite.Age" class="form-control" />
+                <span asp-validation-for="Favorite.Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Favorite.ReleaseDate" class="control-label"></label>
+                <input asp-for="Favorite.ReleaseDate" class="form-control" />
+                <span asp-validation-for="Favorite.ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Favorite.Gender" class="control-label"></label>
+                <input asp-for="Favorite.Gender" class="form-control" />
+                <span asp-validation-for="Favorite.Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Favorite.Hobbies" class="control-label"></label>
+                <input asp-for="Favorite.Hobbies" class="form-control" />
+                <span asp-validation-for="Favorite.Hobbies" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Favorite.interestingAboutme" class="control-label"></label>
+                <input asp-for="Favorite.interestingAboutme" class="form-control" />
+                <span asp-validation-for="Favorite.interestingAboutme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
